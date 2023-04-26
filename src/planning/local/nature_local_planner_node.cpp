@@ -219,7 +219,7 @@ int main(int argc, char *argv[]){
           s0 += output_path_step;
         }
         //local_path.header.frame_id = "odom";
-        local_path.header.frame_id = "map";
+        local_path.header.frame_id = "tracer"; // Editado para Airsim JLV
         local_path.header.stamp = n->get_stamp();
         nature::node::set_seq(local_path.header, loop_count);
         path_pub->publish(local_path);
@@ -230,7 +230,7 @@ int main(int argc, char *argv[]){
         pose.pose = odom.pose.pose;
         local_path.poses.push_back(pose);
         //local_path.header.frame_id = "odom";
-        local_path.header.frame_id = "map";
+        local_path.header.frame_id = "tracer"; // Editado para Airsim JLV
         local_path.header.stamp = n->get_stamp();
         nature::node::set_seq(local_path.header, loop_count);
         path_pub->publish(local_path);

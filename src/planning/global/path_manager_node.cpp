@@ -41,7 +41,7 @@ int main(int argc, char **argv)
             std::vector<std::vector<float>> path = {{0, 10}, {10, 20}, {10, 50}};
 
             nature::msg::Path ros_path;
-            ros_path.header.frame_id = "odom";
+            ros_path.header.frame_id = "tracer"; // Editado para Airsim JLV
             ros_path.poses.clear();
             for (int32_t i = 0; i < path.size(); i++){
                 nature::msg::PoseStamped pose;

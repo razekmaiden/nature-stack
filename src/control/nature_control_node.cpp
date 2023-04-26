@@ -276,7 +276,7 @@ int main(int argc, char *argv[]){
       next_waypoint_msg.point.x = goal.x;
       next_waypoint_msg.point.y = goal.y;
       next_waypoint_msg.point.z = state.pose.pose.position.z;
-      next_waypoint_msg.header.frame_id = "map";
+      next_waypoint_msg.header.frame_id = "tracer"; // Modificado por JLV Airsim
       next_waypoint_msg.header.stamp = n->get_stamp();
       next_waypoint_pub->publish(next_waypoint_msg);
     }

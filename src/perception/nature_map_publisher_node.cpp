@@ -14,7 +14,7 @@ float grid_width, grid_height;
 
 nature::msg::OccupancyGrid CreateGrid(bool row_major){
 	nature::msg::OccupancyGrid grid;
-  grid.header.frame_id = "map";
+  grid.header.frame_id = "world_ned";
   grid.info.resolution = grid_res;
 	int nx = (int)(grid_width/grid_res);
 	int ny = (int)(grid_height/grid_res);

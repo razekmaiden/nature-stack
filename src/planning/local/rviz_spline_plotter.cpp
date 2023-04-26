@@ -14,7 +14,7 @@ namespace nature {
 
     nature::msg::Marker RVIZPlotter::get_marker_msg(int type, int id, bool is_blocked) const{
       nature::msg::Marker marker;
-      marker.header.frame_id = "map";
+      marker.header.frame_id = "tracer"; // Editado para Airsim JLV
       marker.header.stamp = node_->get_stamp();
       marker.id = id;
       marker.type = type;
